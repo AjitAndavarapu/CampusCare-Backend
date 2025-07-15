@@ -30,7 +30,7 @@ app.use(cors());
 app.use('/api/tickets', ticketRoutes);
 
 app.get("/",(req,res)=>{
-    res.send("Hyy, CampusCare will be deployed very soon");
+    res.send("Hyy, CampusCare will be deployed very soon, checking changes automated");
 })
 
 //running server
