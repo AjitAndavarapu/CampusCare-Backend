@@ -105,7 +105,7 @@ const addTicket = asyncHandler(async (req, res) => {
     category,
     location,
     imageURL,
-    raisedBy,
+    id,
     userId,
     fcmToken,
     customCategory,
@@ -118,7 +118,7 @@ const addTicket = asyncHandler(async (req, res) => {
     category,
     location,
     imageURL,
-    raisedBy,
+    id,
     userId,
     fcmToken,
     customCategory,
@@ -130,8 +130,8 @@ const addTicket = asyncHandler(async (req, res) => {
 
 // Get all tickets for a user
 const getUserTickets = asyncHandler(async (req, res) => {
-  const userId = req.params.id;
-  const tickets = await TicketModel.find({ userId });
+  const id = req.params.id;
+  const tickets = await TicketModel.find({ id });
 
   res.status(200).json({ tickets });
 });

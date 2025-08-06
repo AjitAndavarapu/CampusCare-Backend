@@ -26,12 +26,12 @@ const ticketSchema = new Schema(
     location: { type: String, required: true },
     imageURL: { type: String }, // Not required: optional image
     //raisedBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
-    raisedBy: { type: String, ref: "User", required: true },
+    id: { type: String, ref: "User", required: true },
     fcmToken: { type: String },
     status: {
       type: String,
-      enum: ["Open", "In Progress", "Resolved", "Closed"],
-      default: "Open",
+      enum: ["Raised", "In Progress", "Resolved", "Closed"],
+      default: "Raised",     
     },
     //assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     assignedTo: { type: String, ref: "User" },
